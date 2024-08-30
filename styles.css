@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #121212;
-  color: #fff;
+  background-color: #121212; /* Dark background */
+  color: #fff; /* White text */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,37 +9,47 @@ body {
   margin: 0;
 }
 
+/* Add a max height and enable scrolling for the game options */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.game-option {
+  border: 1px solid #ff9800; /* Orange border */
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.game-option.selected {
+  transform: scale(1.05);
+  border-color: #e67e00; /* Darker orange when selected */
+  background-color: #1e1e1e; /* Darker background when selected */
+}
+
 .container {
-  background: #1e1e1e;
+  background: #1e1e1e; /* Dark container background */
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
   padding: 30px;
   max-width: 400px;
   width: 100%;
   text-align: center;
-  border: 2px solid #ff9800;
+  border: 2px solid #ff9800; /* Orange border */
 }
 
 h1 {
   margin-bottom: 25px;
   font-size: 24px;
-  color: #ff9800;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.game-option {
-  border: 1px solid #ff9800;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s, border-color 0.3s;
+  color: #ff9800; /* Orange heading */
 }
 
 .game-option img {
@@ -50,12 +60,12 @@ h1 {
 
 .game-option p {
   font-weight: 500;
-  color: #fff;
+  color: #fff; /* White text */
 }
 
 .game-option:hover, .game-option.selected {
   transform: scale(1.05);
-  border-color: #e67e00;
+  border-color: #e67e00; /* Darker orange on hover/selection */
 }
 
 .form-group {
@@ -67,7 +77,7 @@ label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  color: #fff;
+  color: #fff; /* White text */
 }
 
 .key-slider {
@@ -81,7 +91,7 @@ label {
   width: 100%;
   height: 8px;
   border-radius: 5px;
-  background: #333;
+  background: #333; /* Darker background */
   outline: none;
   transition: background 0.3s;
 }
@@ -92,23 +102,23 @@ label {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ff9800;
+  background: #ff9800; /* Orange thumb */
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .key-slider input[type="range"]:hover::-webkit-slider-thumb {
-  background: #e67e00;
+  background: #e67e00; /* Darker orange on hover */
 }
 
 #keyValue {
   font-size: 18px;
   font-weight: bold;
-  color: #ff9800;
+  color: #ff9800; /* Orange text */
 }
 
 button {
-  background-color: #ff9800;
+  background-color: #ff9800; /* Orange button */
   color: white;
   border: none;
   padding: 12px 20px;
@@ -120,7 +130,7 @@ button {
 }
 
 button:hover {
-  background-color: #e67e00;
+  background-color: #e67e00; /* Darker orange on hover */
 }
 
 .hidden {
@@ -128,7 +138,7 @@ button:hover {
 }
 
 .progress-bar {
-  background-color: #1e1e1e;
+  background-color: #1e1e1e; /* Dark background */
   border-radius: 8px;
   overflow: hidden;
   margin-top: 25px;
@@ -138,7 +148,7 @@ button:hover {
 
 .progress-bar div {
   height: 100%;
-  background-color: #ff9800;
+  background-color: #ff9800; /* Orange progress */
   width: 0;
   transition: width 0.5s;
 }
@@ -146,7 +156,7 @@ button:hover {
 #progressText {
   margin-top: 15px;
   font-weight: 600;
-  color: #ff9800;
+  color: #ff9800; /* Orange text */
 }
 
 .key-item {
@@ -159,15 +169,15 @@ button:hover {
   flex: 1;
   padding: 12px;
   font-size: 16px;
-  border: 1px solid #ff9800;
+  border: 1px solid #ff9800; /* Orange border */
   border-radius: 8px;
   margin-right: 12px;
-  background: #1e1e1e;
-  color: #fff;
+  background: #1e1e1e; /* Dark background */
+  color: #fff; /* White text */
 }
 
 .copyKeyBtn {
-  background-color: #ff9800;
+  background-color: #ff9800; /* Orange button */
   border: none;
   padding: 12px 20px;
   color: white;
@@ -178,21 +188,20 @@ button:hover {
 }
 
 .copyKeyBtn:hover {
-  background-color: #e67e00;
+  background-color: #e67e00; /* Darker orange on hover */
 }
 
 .footer {
   margin-top: 25px;
   font-size: 14px;
   color: #777;
-  border-top: 2px solid #ff9800;
+  border-top: 2px solid #ff9800; /* Orange border */
   padding-top: 10px;
 }
 
 #copyStatus {
   margin-top: 15px;
-  color: #ff9800;
+  color: #ff9800; /* Orange text */
 }
-
 
 
